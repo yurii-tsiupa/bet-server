@@ -11,6 +11,8 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
+console.log('OPENAI_API_KEY:', process.env.OPENAI_API_KEY);
+
 app.post('/api/analyze', async (req, res) => {
   const { teamA, teamB, sport } = req.body;
 
